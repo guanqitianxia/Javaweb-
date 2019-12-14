@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+  
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddORDeltoShelServlet</servlet-name>
+    <servlet-class>BookPackage.AddORDeltoShelServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddORDeltoShelServlet</servlet-name>
+    <url-pattern>/AddORDeltoShelServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>BookPackage.UploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AuthorUploadServlet</servlet-name>
+    <servlet-class>BookPackage.AuthorUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthorUploadServlet</servlet-name>
+    <url-pattern>/AuthorUploadServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ReaderUploadServlet</servlet-name>
+    <servlet-class>BookPackage.ReaderUploadServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReaderUploadServlet</servlet-name>
+    <url-pattern>/ReaderUploadServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>cartServlet</servlet-name>
+    <servlet-class>BookPackage.cartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cartServlet</servlet-name>
+    <url-pattern>/cartServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <display-name>陈冠豪</display-name>
+  <welcome-file-list>
+  <welcome-file>upload.jsp</welcome-file>
+  <welcome-file>login.html</welcome-file>
+  <welcome-file>index.jsp</welcome-file>
+  <welcome-file>login_Judge.jsp</welcome-file></welcome-file-list>
+</web-app>

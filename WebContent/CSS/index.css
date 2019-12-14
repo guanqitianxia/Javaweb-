@@ -1,0 +1,84 @@
+@charset "UTF-8";
+body{
+	background-image:url('base.jpg');
+	overflow: hidden;
+}
+.header{
+	height:70px;
+	width:100%;
+	text-align:center;
+	background-color:#66CCCC;
+}
+
+.title{
+	font-family:"宋体";
+	color:white;
+	font-size:25px;
+	padding-top:20px;
+}
+.subheader{
+	margin-top:10px;
+	height:55px;
+	width:100%;
+	text-align:center;
+}
+.subheader_content{
+	font-family:"宋体";
+	color:white;
+	font-size:20px;
+	padding-top:15px;
+}
+.entry{
+	position:absolute;
+	left:50%;
+	top:50%;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+	width:350px;
+	height:440px;
+	text-align:center;
+	margin-top:160px;
+}
+
+.entry button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.entry button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.entry button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.entry button:hover span {
+  padding-right: 25px;
+}
+
+.entry button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

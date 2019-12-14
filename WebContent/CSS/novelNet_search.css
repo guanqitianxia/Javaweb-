@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body{
+	
+	background-size:100% 800px;
+	background-repeat: no-repeat;
+	background-image:url('searchnovel.gif');
+}
+.searchCon{
+	width:90%;
+}
+.searchCon button{
+	border:none;
+	border-radius:20px;
+	width:100px;
+	height:40px;
+	margin:20px 20px 20px 30px;
+	background-color:#66CCCC;
+}
+.searchCon button:hover{
+	background-color:#6699ff;
+}
+.searchCon table{
+	margin-top:10px;
+	width:80%;
+	margin:auto;
+	background-color:white;
+}
+.searchCon td img{
+	width:80%;
+	height:140px;
+}
+.searchCon th{
+	height:40px;
+}
+.searchCon td{
+	text-align:center;
+	height:140px;
+	background-color:#F0F8FF;
+}

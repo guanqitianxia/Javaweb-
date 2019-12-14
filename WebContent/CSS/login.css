@@ -1,0 +1,92 @@
+@charset "UTF-8";
+body{
+	/*
+	background-color:#4A374A;
+	*/
+	background-image:url('base.jpg');
+}
+.header{
+	margin-top:60px;
+	height:70px;
+	width:100%;
+	text-align:center;
+	color:white;
+	text-shadow:0 0 10px;   
+    letter-spacing: 1px;
+}
+
+.title{
+	font-family:"宋体";
+	color:white;
+	font-size:30px;
+	font-weight:bold;
+	padding-top:20px;
+}
+.loginCon{
+	margin-top:30px;
+}
+.logGet{
+	/*
+	border-radius:10px;
+	*/
+	margin:auto;
+	width:300px;
+	height:300px;
+	background-color:white;
+	text-align:center;
+}
+.logTiltle{
+	/*
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	*/
+	width:100%;
+	color:white;
+	background-color:#755775;
+	font-size:20px;
+	text-shadow:0 0 10px;   
+    letter-spacing: 1px;
+}
+
+
+.logEdit{
+	margin-top:5px;
+	margin-left:13px;
+	width:100%;
+	height:35px;
+	text-align:left;
+}
+.logEdit img{
+	margin-top:3px;
+	margin-left:0px;
+	margin-right:4px;
+	height:30px;
+	width:30px;
+	border:solid;
+	border-width:1px;
+	border-radius:50%;
+}
+.logEdit input{
+	margin-left:0px;
+	position: absolute;
+	width:220px;
+	height:30px;
+}
+
+.logBtn{
+	margin-top:15px;
+}
+.logBtnN{
+	margin-top:10px;
+}
+button{
+	border-style:none;
+	margin-top:10px;
+	background-color:#755775;
+	color:white;
+	width:100%;
+	height:35px;
+}
+button:hover{
+	background-color:#b399b3;
+}

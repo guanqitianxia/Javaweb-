@@ -1,0 +1,262 @@
+@charset "UTF-8";
+body{
+	background-color:#FFFAF0;
+}
+.header{
+	height:50px;
+	width:100%;
+	background-color:black;
+	text-align:center;
+}
+.header button{
+	font-size:20px;
+	width:14%;
+	border:none;
+	float:left;
+	height:100%;
+	color:white;
+	padding-top:5px;
+	background-color:black;
+}
+.header button:hover{
+color:#FF8C00;
+}
+.header img{
+	height:30px;
+	width:30px;
+	float:left;
+}
+.catalog{
+    width:400px;
+    margin:auto;
+    margin-right:37%;
+}
+.catalog ul{
+	width:100%;
+	list-style:none;
+}
+.catalog li{
+	width:128px;
+}
+.catalog a{
+  width:100px;
+  float: left;
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.catalog a:hover{
+	background-color:#DCDCDC;
+}
+/*下拉菜单*/
+.dropbtn {
+  position: relative;
+  display: inline-block;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown a:hover{
+	color:black;
+}
+.dropbtn:hover .dropdown {
+  display: block;
+}
+.entity_book{
+	width:80%;
+	margin:auto;
+	margin-top:30px;
+}
+.entity_search{
+	background-color:#d9d9d9;
+	width:100%;
+	height:200px;
+	margin:0px auto;
+}
+.entity_search_title{
+	font-size:20px;
+	text-align:center;
+	width:100%;
+	height:10%;
+}
+
+.entity_search ul{
+	list-style:none;
+	width:80%;
+	margin:8px auto;
+	height:70%;
+}
+.entity_search li{
+	margin-bottom:20px;
+	display:block;
+	text-align:center;
+	margin:auto;
+	width:50%;
+	height:50px;
+}
+.entity_search li input{
+	margin-left:10px;
+	height:60%;
+	width:70%;
+	float:left;
+	border:none;
+	background-color:#f2f2f2;
+}
+.entity_search li img{
+	background-color:white;
+	float:left;
+	height:64%;
+	width:13%;
+	display:inline-block;
+}
+.entity_search img:hover{
+	background-color:black;
+}
+.entity_show{
+	width:100%;
+	margin-top:20px;
+	background-color:white;
+}
+.entity_show p{
+	margin-top:10px;
+	width:100%;
+	height:30px;
+	font-size:20px;
+	text-align:center;
+	font-weight:bold;
+}
+.entity_show button{
+	width:100px;
+	height:40px;
+	float:right;
+	margin-right:8px;
+	border:none;
+	background-color:#f2f2f2;
+}
+.entity_show button:hover{
+	background-color:#8c8c8c;
+	color:white;
+}
+.entity_show img{
+	width:20px;
+	height:20px;
+	float:left;
+}
+.entity_show span{
+	margin-top:30px;
+	font-size:15px;
+}
+.entity_show table{
+	border:solid;
+	border-width:1px;
+	border-color:#FFFAF0;
+	width:100%;
+}
+.entity_show th{
+	width:100px;
+	border-bottom:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#808080;
+	height:60px;
+}
+.entity_show td{
+	width:100px;
+	border:solid;
+	border-width:1px;
+	border-color:#FFFAF0;
+	text-align:center;
+	height:40px;
+}
+.entity_show table button{
+	margin-right:25px;
+	margin-top:3px;
+	height:30px;
+	width:80px;
+}
+/*网文*/
+.net_book{
+	width:80%;
+	margin:20px auto;
+	background-color:white;
+}
+.netbook_show{
+	
+}
+.netbook_show_title{
+	width:100%;
+	height:50px;
+	background-color:#FAEBD7;
+	text-align:center;
+}
+.netbook_show_title span{
+	padding-top:15px;
+	height:100%;
+	float:left;
+	font-size:17px;
+}
+.netbook_show_title button{
+	margin-top:10px;
+	margin-right:10px;
+	float:right;
+	height:35px;
+	background-color:#ffffb3;
+	border:none;
+	font-size:17px;
+}
+.netbook_show_title button:hover{
+	border:solid;
+	border-width:1px;
+	border-color:#8c8c8c;
+}
+.netbook_show_title img{
+	width:20px;
+	height:20px;
+	float:left;
+}
+
+.netbook_show table{
+	border:solid;
+	border-width:1px;
+	border-color:#FFFAF0;
+	width:100%;
+}
+.netbook_show th{
+	width:100px;
+	border-bottom:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#808080;
+	height:60px;
+}
+.netbook_show td{
+	width:100px;
+	border:solid;
+	border-width:1px;
+	border-color:#FFFAF0;
+	text-align:center;
+	height:40px;
+}
+.net_book_table img{
+	width:80px;
+	height:100px;
+}
+.table_opration{
+	
+}
+.net_book_table button{
+	font-size:10px;
+	margin-top:10px;
+	border:none;
+	width:80px;
+	height:30px;
+	background-color:#00BFFF;
+}
+.net_book_table button:hover{
+	background-color:#1E90FF;
+}

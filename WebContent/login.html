@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv= "Content-Type" content="text/html; charset=gb2312" >
+<title>登录</title>
+<link href="CSS\\login.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<div class="header">
+  <span class="title" id="show">视听网站</span>
+</div>
+<script type="text/javascript">
+$(function(){
+	$("#show").html(oneValues());
+})
+function oneValues(){
+var result;
+var url=window.location.search; //获取url中"?"符后的字串  
+if(url.indexOf("?")!=-1){
+result = url.substr(url.indexOf("=")+1);
+}
+return result;
+}
+
+</script>
+<div class="loginCon" >
+  <div class="logGet">
+    <div class="logTiltle">
+       <p class="p1">登录</p>
+    </div>
+    <form action="login_Judge.jsp" method="post">
+    <div class="logEdit">
+       <img src="PIC\user.png" width="20" height="20" alt=""/>
+       <input type="number" name="user" width="20" height="20" placeholder="输入用户名"/>
+    </div>
+   <div class="logEdit">
+       <img src="PIC\core.png" width="20" height="20" alt=""/>
+       <input type="password" name="passwd" width="20" height="20" placeholder="输入密码"/>
+    </div>
+
+    <div class="logBtn">
+       <a type="submit" target="_self"><button>登录</button></a>
+    </div>
+    </form>
+    <div class="logBtnN">
+       <a href="regist.jsp?usertype=reader" target="_self"><button>读者注册</button></a>
+       <a href="regist.jsp?usertype=author" target="_self"><button>作者注册</button></a>
+    </div>
+  </div>
+</div>
+</body>
+</htm1l>

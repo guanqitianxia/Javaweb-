@@ -1,0 +1,104 @@
+@charset "UTF-8";
+body{
+	background-image:url('base.jpg');
+}
+.header{
+	margin-top:40px;
+	height:70px;
+	width:100%;
+	text-align:center;
+	color:white;
+	text-shadow:0 0 10px;   
+    letter-spacing: 1px;
+}
+
+.title{
+	font-family:"宋体";
+	color:white;
+	font-size:30px;
+	font-weight:bold;
+	padding-top:20px;
+}
+.returnBtn{
+	width:80px;
+	height:40px;
+}
+button{
+	color:white;
+	border:none;
+	background-color:#755775;
+	border-radius:8px;
+}
+button:hover{
+	background-color:#b399b3;
+	border-radius:8px;
+}
+.title{
+	font-family:"宋体";
+	color:white;
+	font-size:25px;
+	padding-top:20px;
+}
+.registContainer{
+	margin:auto;
+	width:400px;
+	background-color:white;
+	text-align:center;
+}
+.ConTil{
+	width:100%;
+	color:white;
+	background-color:#755775;
+	font-size:20px;
+	padding-top:5px;
+}
+.ConList{
+	width:100%;
+	margin-top:10px;
+}
+.ConList ul{
+	list-style:none;
+	margin:0; 
+	padding:0; 
+	text-align:left;
+}
+.ConList li{
+	width:100%;
+	height:50px;
+	float:left;
+}
+.ConList li span{
+	width:20%;
+	float:left;
+	text-align:right;
+	font-weight:bold;
+}
+.ConList li input{
+	width:65%;
+	float:left;
+	height:20px;
+	margin-left:15px;
+	
+}
+.ConList li select{
+	width:35%;
+	float:left;
+	margin-left:15px;
+}
+.ConBtn{
+	width:100%;
+	padding-top:10px;
+}
+.ConBtn button{
+	width:80px;
+	height:50px;
+	border-radius:5px;
+	border:none;
+	margin-left:20px;
+	margin-bottom:15px;
+	background-color:#755775;
+	color:white;
+}
+.ConBtn button:hover{
+	background-color:#b399b3;
+}

@@ -1,0 +1,300 @@
+@charset "UTF-8";
+body{
+	background-color:#FFFAF0;
+}
+.header{
+	height:50px;
+	width:100%;
+	background-color:black;
+	text-align:center;
+}
+.header button{
+	font-size:20px;
+	width:14%;
+	border:none;
+	float:left;
+	height:100%;
+	color:white;
+	padding-top:5px;
+	background-color:black;
+}
+.header button:hover{
+color:#FF7F50;
+}
+.header img{
+	height:30px;
+	width:30px;
+	float:left;
+}
+.catalog{
+    width:400px;
+    margin:auto;
+    margin-right:37%;
+    margin-bottom:30px;
+}
+.catalog ul{
+	width:100%;
+	list-style:none;
+}
+.catalog li{
+	width:128px;
+}
+.catalog a{
+  width:100px;
+  float: left;
+  background-color: #333;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.catalog a:hover{
+	background-color:#DCDCDC;
+}
+/*下拉菜单*/
+.dropbtn {
+  position: relative;
+  display: inline-block;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown a:hover{
+	color:black;
+}
+.dropbtn:hover .dropdown {
+  display: block;
+}
+/*章节和写作*/
+.catalog_write{
+	width:80%;
+	margin:auto;
+}
+.catalog1{
+	width:29%;
+	float:left;
+	background-color:#DCDCDC;
+}
+.catalog1 ul{
+	width:100%;
+	list-style:none;
+	float:left;
+	margin:0; 
+	padding:0; 
+	text-align:left;
+}
+.catalog1 li{
+	width:100%;
+	height:50px;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#A9A9A9;
+	float:left;
+}
+.catalog_header{
+	width:100%;
+	height:50px;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+}
+.catalog_header span{
+	margin-top:10px;
+}
+.catalog_header form{
+	display:block;
+}
+.catalog_header button{
+	width:24%;
+	height:40px;
+	float:right;
+	border:none;
+	margin-left:10px;
+	color:white;
+	background-color:#32CD32;
+}
+.catalog_header button:hover{
+	background-color:#00FF00;
+}
+.catalog_list{
+	width:100%;
+}
+.catalog_list a{
+	color:black;
+	font-size:18px;
+}
+.catalog_list li input{
+	width:20px;
+	float:right;
+	height:20px;
+}
+.catalog_list span{
+	font-size:15px;
+	float:left;
+}
+.catalog_list li:hover{
+	background-color:#808080;
+}
+.write{
+	width:70%;
+	display:inline-block;
+	background-color:#F0FFFF;
+}
+.write_header{
+	width:100%;
+	height:50px;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+}
+.write_header button{
+	width:14%;
+	height:40px;
+	float:right;
+	border:none;
+	margin-left:10px;
+	color:white;
+	background-color:#32CD32;
+}
+.write_header button:hover{
+	background-color:#00FF00;
+}
+.write_content{
+	margin-top:1px;
+	width:100%;
+	background-color:#F0FFFF;
+}
+.write input{
+	width:100%;
+	height:30px;
+	border:none;
+	font-size:17px;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#A9A9A9;
+	background-color:#F0FFFF;
+}
+.write textarea{
+	font-size:14px;
+	width:100%;
+	border:none;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	background-color:#F0FFFF;
+}
+/*操作*/
+.operation{
+	width:20%;
+	height:90px;
+	margin:auto;
+	text-align:center;
+	margin-bottom:20px;
+}
+.operation img{
+	width:25px;
+	height:25px;
+	float:left;
+}
+.operation button{
+	float:left;
+	font-size:18px;
+	text-align:center;
+	height:50px;
+	width:50%;
+	border:none;
+	color:white;
+	background-color:#1E90FF;
+}
+.operation button:hover{
+	background-color:#00BFFF;
+}
+/*作品信息*/
+.bookinfo{
+	width:60%;
+	margin:auto;
+	text-align:center;
+	margin-bottom:20px;
+	background-color:white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
+h1{
+	padding-top:4px;
+	height:30px;
+	background-color:#00BFFF;
+	margin-bottom:10px;
+	font-size:20px;
+	color:white;
+	font-weight:bold;
+}
+.head_sculpture{
+	width:80%;
+	margin:auto;
+	height:200px;
+}
+.head_sculpture canvas{
+	height:80%;
+	width:150px;
+}
+.head_sculpture input{
+	height:50px;
+	width:100px;
+	border:none;
+	margin-top:15%;
+	margin-right:15%;
+	float:right;
+	color:white;
+	background-color:#696969;
+}
+.head_sculpture input:hover{
+	border:solid;
+	border-width:1px;
+	border-color:white;
+}
+.bookinfolist{
+	width:100%;
+}
+.bookinfolist ul{
+	list-style:none;
+	margin:auto;
+}
+.bookinfolist li{
+	width:80%;
+	height:50px;
+	padding:0px;
+}
+.bookinfolist span{
+	float:left;
+	width:30%;
+	font-weight:bold;
+}
+.bookinfolist li input{
+	width:60%;
+	height:20px;
+	float:left;
+}
+.bookinfolist select{
+	width:20%;
+	height:20px;
+	float:left;
+}
+.bookinfolist textarea{
+	width:70%;
+	margin-bottom:20px;
+}
+.savebtn{
+	width:50%;
+	margin:auto;
+}
+.savebtn button{
+	height:40px;
+	width:80px;
+	border:none;
+	margin-bottom:20px;
+}
+.savebtn button:hover{
+	background-color:#808080;
+}

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+body{
+	background-color:white;
+}
+.booklist{
+	width:80%;
+	height:450px;
+}
+.booklist ul{
+	height:100%;
+	width:100%;
+	list-style:none;
+}
+.booklist li{
+	height:60px;
+	width:100%;
+}
+.booklist span{
+	width:100%;
+	float:left;
+	font-weight:bold;
+}
+.booklist input{
+	width:90%;
+	height:53%;
+	border:none;
+	background-color:#f2f2f2;
+}
+.booklist textarea{
+	width:90%;
+	border:none;
+	background-color:#f2f2f2;
+}
+.booklist select{
+	width:60%;
+}
+.booklist button{
+	height:70%;
+	width:100px;
+	margin-left:100px;
+	border:none;
+	margin-top:80px;
+}
+.booklist button:hover{
+	border:solid;
+	border-width:1px;
+}
