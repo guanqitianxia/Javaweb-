@@ -27,7 +27,7 @@ public class EntiSeaServlet extends javax.servlet.http.HttpServlet implements ja
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 			st=conn.createStatement();
 		}catch(Exception e) {
 			e.printStackTrace();

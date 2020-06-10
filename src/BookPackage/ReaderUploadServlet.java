@@ -98,7 +98,7 @@ public class ReaderUploadServlet extends javax.servlet.http.HttpServlet implemen
 		  //保存到数据库
 		  try {
 		  Class.forName("com.mysql.cj.jdbc.Driver");
-		  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+		  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 		  String sql_update="update novelreaderinfo set rname=?,rsex=?,rmail=?,rposition=?,raddress=?,imagepath=? where rid="+rid;
 		  PreparedStatement ps=conn.prepareStatement(sql_update);
 		  int a1=Integer.parseInt(array[1]);

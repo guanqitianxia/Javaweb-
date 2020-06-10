@@ -32,7 +32,7 @@ if(username0!=null)
 	try
 	{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		conn0=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+		conn0=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 		stmt0=conn0.createStatement();
 		ResultSet rs=stmt0.executeQuery(sql0);
 		rs.next();

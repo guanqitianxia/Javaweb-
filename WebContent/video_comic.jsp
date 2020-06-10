@@ -96,7 +96,7 @@ try
 {
 	
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","root","jisuanji");
+	conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","chenguanhao","jisuanji");
 	stmt=conn.createStatement();
 	ResultSet rs=stmt.executeQuery(sql);
 	while(rs.next())
@@ -150,7 +150,7 @@ finally{
 <%
 
 Class.forName("com.mysql.cj.jdbc.Driver");
-conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","root","jisuanji");
+conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","chenguanhao","jisuanji");
 stmt=conn.createStatement();
 String imagepath="";
 String name1="";

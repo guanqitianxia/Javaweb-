@@ -17,7 +17,7 @@ String username0=request.getParameter("id");int id0=0;if(username0!=null){id0=In
 String usertype=request.getParameter("usertype");
 String sql0="";String getname="";
 if(usertype.equals("1")){
-	sql0="select * from novelauthorinfo where aid="+id0;getname="apenname";
+	sql0="select * from novelauthorinfo where aid="+id0;getname="apenname";//作者用户
 }else{
 	sql0="select * from novelreaderinfo where rid="+id0;getname="rname";
 }
@@ -27,14 +27,25 @@ Statement stmt0=null;
 String name0="";
 if(username0!=null)
 {
+	System.out.println("bol_type");
 	try
 	{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		conn0=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","root","jisuanji");
+		conn0=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","chenguanhao","jisuanji");
 		stmt0=conn0.createStatement();
-		ResultSet rs=stmt0.executeQuery(sql0);
+		ResultSet rs=stmt0.executeQuery(sql0);//获取用户名
 		rs.next();
 		name0=rs.getString(getname);
+		//获取用户喜好
+		/*
+		String sql1=sql1="select * from novelbase b,novelmessage m,novelreaderbookshelf s where s.rid="+id0+" and s.nid=b.nid and b.nid=m.mid";
+		String bol_type="",bol_label="";
+		ResultSet rs1=stmt0.executeQuery(sql1);
+		while(rs1.next()){
+			bol_type=rs1.getString("b.type0");
+			bol_label=rs1.getString("m.Llabel");
+			System.out.println(bol_type);
+		}*/
 	}
 	catch(SQLException e)
 	{
@@ -52,7 +63,7 @@ if(username0!=null)
 }
 %>
 <div class="header">
-    <a href="login.html"><button>注销</button></a>
+    <a href="login.html"><button>注</button></a>
     <a href="reader_info.jsp?operate=wallet&rid=<%=id0%>&usertype=<%=usertype%>"><button><%out.println(name0); %>（id:<%out.println(id0); %>）</button></a>
     <a href="index.jsp?id=<%=id0%>&usertype=<%=usertype%>"><button>首页</button></a>
 </div>
@@ -63,7 +74,7 @@ if(username0!=null)
   if(usertype.equals("1"))
   {
 	  %>
-	  <a href="author_info.jsp?operate=read&aid=<%=id0%>"><button>作者专区</button></a>  
+	  <a href="author_info.jsp?operate=read&aid=<%=id0%>"><button>作者专</button></a>  
 	  <%
   }else{
 	  %>  
@@ -86,7 +97,7 @@ if(username0!=null)
   <ul>
     <li><a class="active" href="novel_index.jsp?type=all&id=<%=id0%>&usertype=<%=usertype%>">全部作品</a></li>
     <li><a class="active" href="novel_index.jsp?type=finsh&id=<%=id0%>&usertype=<%=usertype%>">完本</a></li>
-    <li><a class="active">排行榜</a></li>
+    <li><a class="active" href="novel_index.jsp?type=recommend&id=<%=id0%>&usertype=<%=usertype%>">推荐</a></li>
     <li><a class="active" href="entitybook.jsp?operate=city&id=<%=id0%>&usertype=<%=usertype%>">实体书专窗</a></li>
     <li class="classify">
         <a href="" class="classify_btn">分类</a>
@@ -192,6 +203,9 @@ if(username0!=null)
 	 sql="select * from novelbase,novelmessage where novelbase.nid=novelmessage.nid "+Ssql+Asql+Nsql+Lsql; 
  }else if(type.equals("finsh")){
 	 sql="select * from novelbase,novelmessage where novelbase.nid=novelmessage.nid and novelbase.finish=1 "+Ssql+Asql+Nsql+Lsql;
+ }else if(type.equals("recommend")){
+	 
+	 
  }else{
 	 sql="select * from novelbase,novelmessage where novelbase.nid=novelmessage.nid and novelbase.type0='"+type+"'";
  }
@@ -216,7 +230,7 @@ if(username0!=null)
  try
  {
 	 Class.forName("com.mysql.cj.jdbc.Driver");
-	 conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","root","jisuanji");
+	 conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","chenguanhao","jisuanji");
 	 stmt=conn.createStatement();
 	ResultSet rs=stmt.executeQuery(sql);
 	

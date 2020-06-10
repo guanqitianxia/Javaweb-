@@ -16,10 +16,15 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner; 
+import java.util.Map.Entry;
+import java.util.Scanner;
+import java.util.Set;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -38,7 +43,7 @@ public class NovTexSavServlet extends javax.servlet.http.HttpServlet implements 
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 			st=conn.createStatement();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -63,7 +68,7 @@ public class NovTexSavServlet extends javax.servlet.http.HttpServlet implements 
 		try
 		 {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","root","jisuanji");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","chenguanhao","jisuanji");
 			Statement stmt=conn.createStatement();
 			ResultSet rs=stmt.executeQuery(sql);
 			while(rs.next()){
@@ -99,6 +104,8 @@ public class NovTexSavServlet extends javax.servlet.http.HttpServlet implements 
 			String bodytext=request.getParameter("bodytext");
 			savecontent(chapterID,title,bodytext);
 		}
+		sql_change(aid,nid);//同步数据库数据
+		
 		List<Map> list1=new ArrayList<Map>();
 		readchapter(list1);//再读取，刷新
 		String url="/author_write.jsp?operate=write&aid="+aid+"&nid="+nid+"&chapternum="+chapternum;
@@ -106,9 +113,46 @@ public class NovTexSavServlet extends javax.servlet.http.HttpServlet implements 
 		request.getRequestDispatcher(url).forward(request, response);
 		
 	}
+	public void sql_change(int aid,int nid) {
+    	System.out.println(txtpath);
+    	/*
+		Map<String, Integer> map=new HashMap<String , Integer>();
+		try {
+			BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream(txtpath)));
+			String s=null;
+			String name=null;
+			while((s=br.readLine())!=null) {
+				name=s.split(",")[1];
+				if(map.containsKey(name)) {
+					map.put(name,map.get(name)+1);
+				}else {
+					map.put(name, 1);
+				}
+			}
+			Set<Entry<String,Integer>> set=map.entrySet();
+			List<Entry<String,Integer>> list=new ArrayList<Entry<String,Integer>>(set);
+			Collections.sort(list,new Comparator<Entry<String,Integer>>(){
+				public int compare(Entry<String,Integer> o1,
+						Entry<String,Integer> o2) {
+					    int i=o1.getValue();
+					    int j=o2.getValue();
+					    if(i!=j) {
+					    	return i-j;
+					    }
+					    return o1.getKey().compareTo(o2.getKey());}});
+			for(Entry<String,Integer> entry:list) {
+				String n=entry.getKey();
+				Integer i=entry.getValue();
+				System.out.println(n+":"+i);
+			}
+		}catch (IOException e) {
+			e.printStackTrace();
+		}*/
+		
+	}
 	public void savecontent(int chapterID,String title,String bodytext) {
 		title="第"+chapterID+"章"+title+"\n";
-		System.out.println(title);
+		//System.out.println(title);
 		ArrayList<String> arraylist=new ArrayList<>();
 		try {
 			File file=new File(txtpath);

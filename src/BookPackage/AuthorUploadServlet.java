@@ -137,7 +137,7 @@ public class AuthorUploadServlet extends javax.servlet.http.HttpServlet implemen
 		  //保存到数据库
 		  try {
 		  Class.forName("com.mysql.cj.jdbc.Driver");
-		  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+		  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 		  String sql_update="update novelauthorinfo set arealname=?,apenname=?,agrade=?,aidentityID=?,asex=?,apositionC=?,apositionX=?,aphone=?,amail=?,aqq=?,aimagepath=? where aid="+aid;
 		  PreparedStatement ps=conn.prepareStatement(sql_update);
 		  for(int i=1;i<11;i++)

@@ -37,7 +37,7 @@ if(username0!=null)
 	try
 	{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+		conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 		stmt0=conn.createStatement();
 		ResultSet rs=stmt0.executeQuery(sql0);
 		rs.next();
@@ -188,7 +188,7 @@ int aid=0,bid=0,bmoney=0,bnumber=0;
 String bname="",btype="",bauthor="";
 try{
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+	conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 	stmt=conn.createStatement();
 	ResultSet rs=stmt.executeQuery(sql);
 	while(rs.next())

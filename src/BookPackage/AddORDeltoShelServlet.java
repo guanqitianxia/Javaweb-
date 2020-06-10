@@ -38,7 +38,7 @@ public class AddORDeltoShelServlet extends javax.servlet.http.HttpServlet implem
 		try
 		 {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 			PreparedStatement ps=conn.prepareStatement(sql);
 			//System.out.print(sql);
 			ps.executeUpdate();

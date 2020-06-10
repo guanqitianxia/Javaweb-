@@ -125,7 +125,7 @@ public class UploadServlet extends javax.servlet.http.HttpServlet implements jav
 	  //保存到数据库
 	  try {
 	  Class.forName("com.mysql.cj.jdbc.Driver");
-	  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+	  Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 	  String sql_delete="delete from novelbase where nid="+bid;
 	  PreparedStatement ps=conn.prepareStatement(sql_delete);
 	  ps.executeUpdate();

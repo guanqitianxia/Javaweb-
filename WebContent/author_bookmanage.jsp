@@ -53,7 +53,7 @@ if(bookstyle==null)
 }
 try{
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 	Statement stmt=conn.createStatement();
 if(bookstyle.equals("entitymanage"))
 {

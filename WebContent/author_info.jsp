@@ -37,7 +37,7 @@ int asex=0,aqq=0;
 try{
 	String sql="select * from novelauthorinfo where aid="+aid;
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 	Statement stmt=conn.createStatement();
 	ResultSet rs=stmt.executeQuery(sql);
 	while(rs.next()){

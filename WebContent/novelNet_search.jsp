@@ -40,7 +40,7 @@ String sql="select * from novelbase where name='"+search+"'";
 
 try{
 	 Class.forName("com.mysql.cj.jdbc.Driver");
-	 conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+	 conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 	 stmt=conn.createStatement();
 	 ResultSet rs=stmt.executeQuery(sql);
 	 String imagepath="",name="",author="",intro="";

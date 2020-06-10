@@ -27,7 +27,7 @@ if(username0!=null)
 	try
 	{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		conn0=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","root","jisuanji");
+		conn0=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","chenguanhao","jisuanji");
 		stmt0=conn0.createStatement();
 		ResultSet rs=stmt0.executeQuery(sql0);
 		rs.next();
@@ -113,7 +113,7 @@ String intro="";
 try
 {
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","root","jisuanji");
+	conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC","chenguanhao","jisuanji");
 	stmt=conn.createStatement();
 	ResultSet rs=stmt.executeQuery(sql);
 	rs.next();

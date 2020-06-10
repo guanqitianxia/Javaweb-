@@ -58,7 +58,7 @@ if(operate.equals("update"))
 {
 	try{
 		Class.forName("com.mysql.cj.jdbc.Driver");
-		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+		Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 		String sql="select * from novelauthorentity where aid="+aid+" and bid="+bid;
 		Statement stmt=conn.createStatement();
 		ResultSet rs=stmt.executeQuery(sql);
@@ -96,7 +96,7 @@ if(operate1.equals("update")){
 		if(bauthor==null){bauthor="isnull";}else{bauthor=new String(request.getParameter("bauthor").getBytes("iso-8859-1"), "utf-8");}
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+			Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 			String sql="update novelauthorentity set aid=?,bid=?,bname=?,btype=?,bmoney=?,bnumber=?,bintro=?,bauthor=? where aid="+aid+" and bid="+bid;
 			
 			PreparedStatement ps=conn.prepareStatement(sql);
@@ -140,7 +140,7 @@ if(operate1.equals("insert"))//不为空才创建
 	if(bauthor==null){bauthor="isnull";}else{bauthor=new String(request.getParameter("bauthor").getBytes("iso-8859-1"), "utf-8");}
 try{
 	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","root","jisuanji");
+	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/redlen?serverTimezone=UTC&&useUnicode=true&&characterEncoding=UTF-8","chenguanhao","jisuanji");
 	String sql="insert into novelauthorentity(aid,bid,bname,btype,bmoney,bnumber,bintro,bauthor) value(?,?,?,?,?,?,?,?)";
 	
 	PreparedStatement ps=conn.prepareStatement(sql);
